@@ -1,7 +1,7 @@
 export default function About() {
   const skills = [
-    "React", "Next.js", "TypeScript", "Tailwind CSS", 
-    "Node.js", "PostgreSQL", "Prisma", "AWS"
+    "React", "Next.js", "Javascript", "TypeScript", "Tailwind CSS", 
+    "Node.js", "Express.js", "MongoDb", "PostgreSQL"
   ];
 
   return (
@@ -10,8 +10,8 @@ export default function About() {
         <h1 className="text-4xl font-bold">About Me</h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
           I'm a self-taught developer with a passion for building products that matter. 
-          With over 5 years of experience in the industry, I've worked with startups 
-          and established companies to create scalable web applications.
+          Crafting seamless full-stack experiences with MongoDB, Express, React, and Node.js.
+          Transforming ideas into elegant, scalable web solutions.
         </p>
       </section>
 
@@ -34,17 +34,11 @@ export default function About() {
         <div className="space-y-12">
           {[
             {
-              company: "Tech Solutions Inc.",
-              role: "Senior Full Stack Developer",
-              period: "2021 - Present",
-              description: "Leading the development of a cloud-based SaaS platform serving 10k+ active users."
+              company: "Gomycode.",
+              role: "Junior Full Stack Developer",
+              period: "2025 - Present",
+              description: "Software Development Bootcamp With AI Skills."
             },
-            {
-              company: "Creative Digital Agency",
-              role: "Frontend Developer",
-              period: "2019 - 2021",
-              description: "Built high-performance marketing sites and interactive web experiences for global brands."
-            }
           ].map((job, index) => (
             <div key={index} className="relative pl-8 border-l-2 border-gray-200 dark:border-gray-800">
               <div className="absolute w-4 h-4 bg-blue-600 rounded-full -left-[9px] top-1"></div>

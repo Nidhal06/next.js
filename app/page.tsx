@@ -6,8 +6,8 @@ export default function Home() {
     <div className="py-12 sm:py-24">
       <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-12">
         <div className="flex-1 space-y-6 text-center sm:text-left">
-          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight">
-            Hi, I'm <span className="text-blue-600">John Doe</span>
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
+            Hi, I'm <span className="text-blue-600">Nidhal Gharbi</span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl">
             A passionate Full-Stack Developer specializing in building exceptional digital experiences. 
@@ -30,15 +30,15 @@ export default function Home() {
         </div>
         <div className="relative w-64 h-64 sm:w-80 sm:h-80">
           <div className="absolute inset-0 bg-blue-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
-              <Image
-                src="/profile.png"
-                alt="Profile"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
+          <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
+            <Image
+              src="/profile.png"
+              alt="Profile"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
       </div>
 
