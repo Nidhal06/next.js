@@ -30,15 +30,15 @@ export default function Home() {
         </div>
         <div className="relative w-64 h-64 sm:w-80 sm:h-80">
           <div className="absolute inset-0 bg-blue-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-          <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
-            <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=60"
-              alt="Profile"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
+            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
+              <Image
+                src="/profile.png"
+                alt="Profile"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
         </div>
       </div>
 
