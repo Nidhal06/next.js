@@ -1,0 +1,7 @@
+{
+  "projectId": "5e6edbb9-a32b-4e9b-a89a-fd0069480a75",
+  "createdAt": 1766958870501,
+  "startupCommands": [
+    "npm install; npx next dev -p 3005"
+  ]
+}
