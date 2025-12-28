@@ -1,65 +1,75 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="py-12 sm:py-24">
+      <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-12">
+        <div className="flex-1 space-y-6 text-center sm:text-left">
+          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight">
+            Hi, I'm <span className="text-blue-600">John Doe</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl">
+            A passionate Full-Stack Developer specializing in building exceptional digital experiences. 
+            I love turning complex problems into beautiful, intuitive designs.
           </p>
+          <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
+            <Link 
+              href="/projects" 
+              className="px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            >
+              View My Work
+            </Link>
+            <Link 
+              href="/contact" 
+              className="px-8 py-3 border border-gray-300 dark:border-gray-700 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
+            >
+              Contact Me
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <div className="relative w-64 h-64 sm:w-80 sm:h-80">
+          <div className="absolute inset-0 bg-blue-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+          <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=60"
+              alt="Profile"
+              fill
+              className="object-cover"
+              priority
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
+      </div>
+
+      <section className="mt-24">
+        <h2 className="text-2xl font-bold mb-8">What I Do</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Frontend Development",
+              description: "Creating responsive, high-performance web applications using React and Next.js.",
+              icon: "🎨"
+            },
+            {
+              title: "Backend Development",
+              description: "Building scalable APIs and robust server-side logic using Node.js and Databases.",
+              icon: "⚙️"
+            },
+            {
+              title: "UI/UX Design",
+              description: "Designing intuitive user interfaces that provide seamless user experiences.",
+              icon: "✨"
+            }
+          ].map((service, index) => (
+            <div key={index} className="p-6 rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-blue-500 transition-colors">
+              <div className="text-4xl mb-4">{service.icon}</div>
+              <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+              <p className="text-gray-600 dark:text-gray-400">{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
